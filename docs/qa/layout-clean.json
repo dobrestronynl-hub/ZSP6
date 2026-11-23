@@ -1,0 +1,212 @@
+[
+  {
+    "page": "oficjalna.html",
+    "width": 360,
+    "scrollWidth": 345,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "oficjalna.html",
+    "width": 390,
+    "scrollWidth": 375,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "oficjalna.html",
+    "width": 768,
+    "scrollWidth": 753,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "oficjalna.html",
+    "width": 1024,
+    "scrollWidth": 1009,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "oficjalna.html",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 6,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "oficjalna.html",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 6,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "kreatywna.html",
+    "width": 360,
+    "scrollWidth": 345,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "kreatywna.html",
+    "width": 390,
+    "scrollWidth": 375,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "kreatywna.html",
+    "width": 768,
+    "scrollWidth": 753,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "kreatywna.html",
+    "width": 1024,
+    "scrollWidth": 1009,
+    "overflow": false,
+    "menu": true,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "kreatywna.html",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 6,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  },
+  {
+    "page": "kreatywna.html",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 6,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1,
+    "heroFonts": [
+      "normal",
+      "normal",
+      "normal"
+    ],
+    "sidebarNodes": 0
+  }
+]

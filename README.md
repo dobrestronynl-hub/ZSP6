@@ -18,24 +18,11 @@ W obu wariantach dostępne są: lokalna wyszukiwarka treści i opisów dokument�
 
 Formularz kontaktowy sprawdza poprawność pól i wyraźnie informuje o demonstracyjnym charakterze. **Nie wysyła ani nie zapisuje wiadomości.** Pola nie mają nazw umożliwiających serializację danych do żądania formularza.
 
-## Pomarańczowy panel funkcji do wyceny
+## Osobne demonstracje funkcjonalności
 
-Panel zawiera osiem działających demonstracji:
+Na życzenie użytkownika usunięto panel dodatkowych funkcji z obu wizualizacji. Nagłówki hero mają prostą typografię bez kursywy, a treść wykorzystuje szerokość strony bez zarezerwowanego miejsca na sidebar.
 
-1. Asystent wyboru kierunku.
-2. Osobista checklista rekrutacji.
-3. Dni otwarte i spotkania z eksportem przykładowego wydarzenia `.ics`.
-4. Biblioteka dokumentów z wyszukiwaniem i wyborem odbiorcy.
-5. Portfolio uczniów z filtrowaniem i powiększeniem.
-6. Panel ucznia i rodzica z przypinaniem odnośników.
-7. Przewodnik po sprawach szkolnych.
-8. Edytor aktualności z lokalnym podglądem i pobraniem szkicu.
-
-Na szerokim ekranie panel znajduje się z prawej strony; na mniejszych ekranach otwiera się z przycisku. Można wypróbować moduł, dodać go do zakresu i wrócić do listy funkcji. **Nie podano cen** — podsumowanie służy ustaleniu zakresu wyceny i nie stanowi zamówienia.
-
-Wybrane moduły są wspólne dla obu wersji dzięki `localStorage` w tej samej przeglądarce. Zapamiętywane są identyfikatory wyborów, zaznaczenia checklisty i ulubione odnośniki, bez danych osobowych. Przy zablokowanym zapisie działa pamięć bieżącej strony; nie zapewnia ona zachowania wyboru po przeładowaniu lub przejściu na inny adres. Zakres można pobrać jako TXT oraz przygotować do wydruku lub zapisu PDF przez przeglądarkę.
-
-Demonstracje nie rezerwują miejsc, nie publikują aktualności i nie łączą się z e-dziennikiem. Konta, wysyłka, CMS, przechowywanie plików i integracje wymagają osobnego wdrożenia; zależności opisano przy każdym module.
+Dodatkowe demonstracje rozwijane są jako osiem niezależnych projektów: asystent kierunku, checklista rekrutacji, dni otwarte, biblioteka dokumentów, portfolio, panel ucznia i rodzica, sprawy sekretariatu oraz edytor aktualności. Nie są ładowane przez tę stronę i nie mają wspólnego panelu wyceny. Każdy projekt ma własny opis działania, korzyści, granic demonstracji i scenariuszy testowania.
 
 ## Uruchomienie i build
 
@@ -51,10 +38,10 @@ python3 -m http.server 8000
 
 Podgląd lokalny: [http://localhost:8000/](http://localhost:8000/). Build kopiuje trzy strony i katalog `assets/` do `dist/`; nie publikuje strony. GitHub Pages może serwować statyczne pliki z katalogu głównego repozytorium zgodnie z istniejącą konfiguracją publikacji.
 
-Główne zasoby to `assets/site.css`, `assets/site.js`, `assets/features.css` i `assets/features.js`. Oryginalny znak z wcześniejszych materiałów projektu wydzielono do `assets/logo.webp`; nie zastąpiono go nowym logo. Parametr `?preview=gate` wyłącza panel dodatkowych modułów w podglądzie za wrotami.
+Główne zasoby to `assets/site.css` i `assets/site.js`. Oryginalny znak z wcześniejszych materiałów projektu wydzielono do `assets/logo.webp`; nie zastąpiono go nowym logo.
 
 ## Materiały i jakość
 
 [Źródła i pochodzenie materiałów](docs/SOURCES.md) dokumentują treści, terminy, dokumenty, fotografie i ograniczenia dotyczące praw do ponownej publikacji. Zdjęcia są ładowane z serwera szkoły; ich dostępność zależy od tego serwera. Wizualizacja zachowuje `noindex,nofollow`.
 
-[Raport QA](docs/QA.md) opisuje wykonane testy i ich granice. Sprawdzono 18 układów w Chromium przy rzeczywistych szerokościach 360, 390, 768, 1024, 1440 i 1920 px, z załadowanymi fotografiami. Sprawdzono też interakcje, lokalny zapis oraz zawartość pobranych plików. Nie deklarujemy pełnej certyfikacji WCAG ani wizualnej walidacji wygenerowanego PDF.
+[Raport QA](docs/QA.md) opisuje wykonane testy i ich granice. Po usunięciu sidebaru ponownie sprawdzono obie wersje przy szerokościach 360, 390, 768, 1024, 1440 i 1920 px. W każdym układzie potwierdzono brak poziomego przepełnienia, brak sidebaru i prosty krój wszystkich elementów nagłówka hero. Wcześniejsze interakcje szkolne pozostają w projekcie. Nie deklarujemy pełnej certyfikacji WCAG ani wizualnej walidacji wygenerowanego PDF.

@@ -103,14 +103,14 @@ def check():
                 checked_assets += 1
                 if not (css.parent / unquote(url.path)).is_file():
                     fail(css.name, 1, f'missing CSS asset: {value}')
-    for script in ('site.js', 'features.js'):
+    for script in ('site.js',):
         result = subprocess.run(['node', '--check', str(ROOT / 'assets' / script)], capture_output=True, text=True)
         if result.returncode:
             fail(script, 1, result.stderr.strip())
     if issues:
         print('\n'.join(issues))
         return 1
-    print(f'PASS: {len(pages)} HTML pages; {checked_links} local links; {checked_assets} local assets; unique IDs, ARIA references, labels, image attributes, no contact serialization; 2 JavaScript syntax checks.')
+    print(f'PASS: {len(pages)} HTML pages; {checked_links} local links; {checked_assets} local assets; unique IDs, ARIA references, labels, image attributes, no contact serialization; 1 JavaScript syntax check.')
     print('Scope: static structure only. Remote resources, visual layout, accessibility interaction and deployment need separate checks.')
     return 0
 
