@@ -5,6 +5,7 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dist"
 OUT.mkdir(exist_ok=True)
+(OUT / ".nojekyll").touch()
 for filename in ("index.html", "oficjalna.html", "kreatywna.html"):
     shutil.copy2(ROOT / filename, OUT / filename)
 if (OUT / "assets").exists():
