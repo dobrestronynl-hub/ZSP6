@@ -22,7 +22,7 @@ Formularz kontaktowy sprawdza poprawność pól i wyraźnie informuje o demonstr
 
 Na życzenie użytkownika usunięto panel dodatkowych funkcji z obu wizualizacji. Nagłówki hero mają prostą typografię bez kursywy, a treść wykorzystuje szerokość strony bez zarezerwowanego miejsca na sidebar.
 
-Dodatkowe demonstracje rozwijane są jako osiem niezależnych projektów: asystent kierunku, checklista rekrutacji, dni otwarte, biblioteka dokumentów, portfolio, panel ucznia i rodzica, sprawy sekretariatu oraz edytor aktualności. Nie są ładowane przez tę stronę i nie mają wspólnego panelu wyceny. Każdy projekt ma własny opis działania, korzyści, granic demonstracji i scenariuszy testowania.
+Dodatkowe demonstracje rozwijane są jako osiem niezależnych projektów: asystent AI szkoły, asystent kierunku, checklista rekrutacji, dni otwarte, biblioteka dokumentów, portfolio, panel ucznia i rodzica oraz sprawy sekretariatu. Nie są ładowane przez tę stronę i nie mają wspólnego panelu wyceny. Każdy projekt ma własny opis działania, korzyści, granic demonstracji i scenariuszy testowania.
 
 [Katalog interaktywnych dodatków](https://dobrestronynl-hub.github.io/ZSP6/dodatki/) jest publikowany w osobnym katalogu `dodatki/` tego hostingu. Każdy moduł ma własny adres i działa bez otwierania kodu na GitHubie. Źródła oraz dokumentacja są utrzymywane w osobnym repozytorium [Dodatki-ZSP6](https://github.com/dobrestronynl-hub/Dodatki-ZSP6). Katalog `dodatki/` jest kopią przygotowanego tam pakietu `dist/`, używaną wyłącznie do publikacji. Zmiany modułów należy wykonywać w repozytorium źródłowym, a następnie odświeżyć tę kopię. Dodatki nie tworzą sidebaru i nie są automatycznie dołączane do obu wizualizacji.
 

@@ -1,5 +1,11 @@
 # ZSP6: Dni otwarte i spotkania
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/dni-otwarte/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielna demonstracja wyboru terminu i pobrania pliku kalendarza. Nie zawiera opublikowanych przez szkołę terminów ani systemu rezerwacji. Każda wygenerowana pozycja jest oznaczona jako DEMO.
 
 ## Co robi

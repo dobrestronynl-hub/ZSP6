@@ -1,5 +1,11 @@
 # ZSP6. Portfolio uczniów
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/portfolio-uczniow/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielna galeria ośmiu rzeczywistych prac z oficjalnych materiałów szkoły. Nie odczytuje galerii z DOM innej strony i nie wymaga głównej wizualizacji ZSP6.
 
 ## Co to robi

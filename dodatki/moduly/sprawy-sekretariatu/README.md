@@ -1,5 +1,11 @@
 # ZSP6. Sprawy sekretariatu
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/sprawy-sekretariatu/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielna demonstracja przewodnika po sprawach szkolnych, wydzielona z wcześniejszej wizualizacji ZSP6. Nie wymaga pozostałych modułów ani serwera aplikacyjnego.
 
 ## Co robi

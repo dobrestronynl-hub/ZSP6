@@ -8,7 +8,7 @@
 - Miejsce na kopię wynikową: `ZSP6/dodatki/`.
 - Docelowy katalog podglądów: https://dobrestronynl-hub.github.io/ZSP6/dodatki/ .
 
-Aktualny status publikacji oraz wyniki sprawdzenia są dostępne w [repozytorium źródłowym Dodatki-ZSP6](https://github.com/dobrestronynl-hub/Dodatki-ZSP6). Ten plik jest kopią instrukcji dostarczoną z pakietem publikacyjnym.
+Bieżące wyniki publikacji i testów są utrzymywane w [repozytorium źródłowym Dodatki-ZSP6](https://github.com/dobrestronynl-hub/Dodatki-ZSP6). Historyczny raport `QA-PUBLIKACJA.md` dotyczy zestawu sprzed dodania asystenta AI.
 
 Repozytorium dodatków pozostaje oddzielne. Przechowuje kod do rozwijania, opisy funkcji, zakres wyceny oraz testy. Repozytorium ZSP6 przechowuje kopię wynikową potrzebną istniejącemu hostingowi GitHub Pages. Moduły są osobnymi stronami, a główne wizualizacje nie ładują ich w sidebarze.
 
@@ -42,7 +42,7 @@ Sprawdź:
 - czy katalog i moduły otwierają interfejsy, a nie pliki źródłowe lub komunikat 404;
 - czy logo, style i skrypty ładują się z poprawnych ścieżek;
 - czy przycisk „Wróć do dodatków” otwiera wspólny katalog;
-- czy wybór kierunku, filtry, lokalny zapis ustawień i podgląd szkicu działają;
+- czy wybór kierunku, filtry, lokalny zapis ustawień i kontekst rozmowy asystenta, podgląd widżetu i eksport rozmowy TXT działają;
 - czy pliki TXT oraz ICS można pobrać;
 - czy układ jest czytelny na małym ekranie i nie przewija się poziomo;
 - czy główne wizualizacje nadal otwierają się pod dotychczasowymi adresami.
@@ -51,4 +51,4 @@ Szczegółowe scenariusze znajdują się w [instrukcji testowania](TESTOWANIE.md
 
 ## Granice demonstracji
 
-Publiczny hosting nie dodaje integracji z WordPressem, serwera, kont użytkowników ani usług wysyłki. Moduły zachowują opisany zakres demonstracyjny. Zaznaczenie checklisty nie składa wniosku, plik kalendarza nie rezerwuje miejsca, a szkic aktualności nie jest publikowany do CMS szkoły.
+Publiczny hosting nie dodaje integracji z WordPressem, serwera, kont użytkowników ani usług wysyłki. Moduły zachowują opisany zakres demonstracyjny. Zaznaczenie checklisty nie składa wniosku, plik kalendarza nie rezerwuje miejsca, a asystent korzysta z lokalnej bazy odpowiedzi, bez połączenia z modelem AI.

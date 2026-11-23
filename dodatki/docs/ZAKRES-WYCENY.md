@@ -4,6 +4,24 @@ Ten dokument pozwala ocenić każdą funkcjonalność osobno. Opisuje działają
 
 Podstawowy interfejs może działać bez serwera aplikacyjnego. Jeżeli treści mają edytować pracownicy szkoły, trzeba dodatkowo uzgodnić panel administracyjny. Jeżeli użytkownicy mają składać wnioski, rezerwować miejsca lub korzystać z danych prywatnych, potrzebne są rzeczywiste usługi, uprawnienia i proces obsługi po stronie szkoły.
 
+## Asystent AI szkoły
+
+**Co robi demonstracja:** udostępnia okno rozmowy, w którym można zadać pytanie własnymi słowami lub wybrać podpowiedź. Przygotowane odpowiedzi obejmują kierunki, porównanie fotografii i grafiki, rekrutację, dokumenty, sprawy sekretariatu i kontakt. Krótkie dopowiedzenie może korzystać z tematu poprzedniego pytania. Odpowiedzi zawierają odnośniki do odpowiednich materiałów szkoły. Gdy lokalna baza nie zawiera potrzebnej informacji, asystent wskazuje źródło lub kontakt zamiast dopisywać odpowiedź.
+
+**Tryb demonstracyjny:** obecne odpowiedzi wybiera mechanizm lokalny. Nie ma połączenia z modelem AI, automatycznego pobierania witryny ani zapisu rozmów na serwerze. Wizualizacja pozwala ocenić sposób korzystania z asystenta. Wersja produkcyjna z rzeczywistym modelem wymaga osobnej integracji.
+
+**Dlaczego się przyda:** kandydat może zapytać o swoje zainteresowania i porównać kierunki bez znajomości nazw zawodów. Rodzic szybciej dociera do zasad rekrutacji i dokumentów. Uczeń znajduje właściwą procedurę lub dział strony. Sekretariat może otrzymywać mniej powtarzalnych pytań o informacje już opublikowane, a częściej pytania dotyczące konkretnej sprawy. Nie zakłada się z góry liczby zaoszczędzonych godzin.
+
+**Docelowe działanie AI:** model otrzymuje pytanie oraz pasujące fragmenty zatwierdzonej bazy wiedzy szkoły. Odpowiedź powinna zawierać właściwe odnośniki, uwzględniać kontekst rozmowy i jasno wskazywać brak potwierdzonej informacji. Materiały rekrutacyjne muszą być przypisane do właściwego roku. Aktualizacje strony lub dokumentów trafiają do bazy zgodnie z uzgodnionym procesem. Sam chatbot nie podejmuje decyzji o przyjęciu, nie potwierdza złożenia wniosku ani nie uzyskuje dostępu do ocen.
+
+**Minimum wdrożenia AI:** zatwierdzone źródła i zakres pytań, konfiguracja modelu, serwer obsługujący rozmowę, bezpieczne przechowywanie klucza usługi po stronie serwera oraz przygotowanie i aktualizacja bazy wiedzy. Należy ustalić obsługę niedostępności modelu, limity użycia, zasady historii rozmów i kontakt ze szkołą w sprawach wymagających pracownika. Interfejs można osadzić w obecnej stronie lub WordPressie jako otwierany panel.
+
+**Co wpływa na zakres:** liczba i format dokumentów, sposób aktualizacji treści, obsługiwane języki, złożoność wyszukiwania źródeł, raporty jakości odpowiedzi i integracje. Korzystanie z modelu oraz hostingu może wiązać się z bieżącymi opłatami zależnymi od wybranej usługi i użycia. Konkretne usługi i kwoty wymagają ustalenia przed wdrożeniem.
+
+**Do ustalenia ze szkołą:** kto zatwierdza bazę wiedzy, kto reaguje na błędne lub nieaktualne odpowiedzi, jakie pytania chatbot ma obsługiwać i do kogo kierować sprawy indywidualne. Dostęp do danych uczniów nie jest częścią tej koncepcji.
+
+[Wizualizacja i testowanie](../moduly/asystent-ai/README.md)
+
 ## Asystent wyboru kierunku
 
 **Co robi teraz:** po wyborze jednego z czterech obszarów zainteresowań pokazuje kierunek, objaśnienie i uzasadnienie. Drugi wybór prowadzi do programu albo zasad rekrutacji. Działa walidacja, reset i przejście do oficjalnych informacji.
@@ -101,20 +119,6 @@ Podstawowy interfejs może działać bez serwera aplikacyjnego. Jeżeli treści 
 **Do ustalenia ze szkołą:** które sprawy można wyjaśnić samą instrukcją, które wymagają formularza i kto obsługuje przesłane zgłoszenia.
 
 [Opis i testowanie](../moduly/sprawy-sekretariatu/README.md)
-
-## Edytor aktualności
-
-**Co robi teraz:** udostępnia tytuł, kategorię i treść z podglądem. Waliduje wymagane pola, zachowuje tekst użytkownika jako tekst i pobiera szkic TXT. Treść znika po odświeżeniu, jeżeli użytkownik nie zapisał pliku.
-
-**Dlaczego się przyda:** autor może sprawdzić długość tytułu, akapity i kategorię przed przekazaniem wpisu. Wspólny układ sprzyja spójnej publikacji przez różnych pracowników. Pobranie szkicu pozwala przekazać treść do korekty.
-
-**Minimum wdrożenia:** ustalenie kategorii, szablonu wpisu i ról redakcji. W WordPressie należy połączyć interfejs z rzeczywistym zapisem szkiców, logowaniem, uprawnieniami i publikacją, wykorzystując istniejący system treści. Potrzebne są także kopie zapasowe i zasady dodawania zdjęć.
-
-**Co wpływa na wycenę:** liczba ról i autorów, akceptacja przez drugą osobę, wersjonowanie, harmonogram publikacji, multimedia, biblioteka zdjęć, wielojęzyczność i migracja dotychczasowych wpisów. Synchronizacja wielu redaktorów jest osobnym zakresem.
-
-**Do ustalenia ze szkołą:** kto pisze, kto zatwierdza i kto publikuje; czy zwykły panel WordPressa wystarczy, czy potrzebny jest uproszczony interfejs dla nauczycieli.
-
-[Opis i testowanie](../moduly/edytor-aktualnosci/README.md)
 
 ## Wspólne ustalenia przed ofertą
 

@@ -1,5 +1,11 @@
 # ZSP6. Biblioteka dokumentów
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/biblioteka-dokumentow/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielna demonstracja przeszukiwalnego katalogu dokumentów i informacji szkoły. Osiem rzeczywistych odnośników jest dostępnych bez powiązania z kodem głównej wizualizacji.
 
 ## Co to robi

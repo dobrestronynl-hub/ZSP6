@@ -36,6 +36,7 @@ node --check logic.mjs
 
 | Moduł | Działanie | Oczekiwany wynik |
 | --- | --- | --- |
+| Asystent AI | Zapytaj „Interesuje mnie fotografia”, następnie doprecyzuj „A jakie dokumenty?”. Zadaj też pytanie o aktualny termin rekrutacji i pytanie spoza zakresu szkoły. | Pojawia się opis właściwego kierunku i źródło. Dopowiedzenie dotyczy rekrutacji do omawianej szkoły. Aktualny termin nie jest zgadywany. Pytanie spoza bazy otrzymuje jasną informację o braku odpowiedzi. Cały czas widoczne jest oznaczenie demonstracji bez modelu AI. |
 | Asystent | Kliknij „Pokaż kierunek” bez zainteresowania, następnie wybierz fotografię i rekrutację. | Pusty wybór wymaga uzupełnienia. Poprawny wybór pokazuje technika fotografii i multimediów oraz oficjalny odnośnik do rekrutacji. Reset usuwa wynik. |
 | Checklista | W liceum zaznacz dwie pozycje, w technikum jedną. Odśwież, wróć do liceum i pobierz TXT. | Stany wynoszą odpowiednio 2 z 5 i 1 z 4. Zapis zachowuje się w tej samej przeglądarce przy dostępnym localStorage. TXT odzwierciedla wybraną ścieżkę. Reset liceum nie zeruje technikum. |
 | Dni otwarte | Ustaw 10.12.2026 o 10:00, pobierz ICS. Powtórz dla 10.07.2027 o 10:00. | W pierwszym pliku występuje `DTSTART:20261210T090000Z`, a w drugim `DTSTART:20270710T080000Z`. Oba pliki mają oznaczenie DEMO. Usunięcie daty blokuje eksport. |
@@ -43,9 +44,8 @@ node --check logic.mjs
 | Portfolio | Wybierz Fotografia, otwórz pierwszą pracę, przejdź do następnej i zamknij Escape. | Widoczne są dwie prace. Podgląd porusza się wyłącznie w tej kategorii. Escape zamyka okno i przywraca focus do elementu, który je otworzył. |
 | Panel ucznia i rodzica | Wybierz Rodzica, przypnij rekrutację i odśwież stronę. | Rola i przypięcie pozostają przy dostępnym localStorage. Przełączenie na Ucznia filtruje zawartość. „Wyczyść ustawienia” przywraca stan początkowy. |
 | Sprawy sekretariatu | Wybierz duplikat świadectwa i pobierz instrukcję TXT. Następnie zmień temat na współpracę. | Instrukcja i eksport odpowiadają bieżącej sprawie. Dokument świadectwa pochodzi ze źródła szkoły. Zmiana tematu aktualizuje treść. Nie powstaje zgłoszenie. |
-| Edytor aktualności | Zmień tytuł i treść, wpisując także `<strong>Przykład</strong>`. Pobierz TXT, a potem usuń tytuł. | Podgląd odpowiada polom, a znaczniki HTML pozostają tekstem. TXT zawiera szkic. Pusty tytuł blokuje pobranie. Przywrócenie przykładu odtwarza treść demonstracyjną. |
 
-Szczegółowe scenariusze, selektory i przypadki brzegowe znajdują się w README każdego modułu. Występują także bezpośrednio w interfejsach, w sekcji „Przetestuj sam”. Import pliku ICS do własnego kalendarza jest dobrowolnym krokiem testującego. Pobranie pliku nie rezerwuje spotkania.
+Szczegółowe scenariusze, selektory i przypadki brzegowe znajdują się w README każdego modułu. Podstawowe instrukcje są także dostępne w interfejsach modułów. Import pliku ICS do własnego kalendarza jest dobrowolnym krokiem testującego. Pobranie pliku nie rezerwuje spotkania.
 
 ## Układ i obsługa
 
@@ -53,11 +53,11 @@ Sprawdź strony przy szerokościach 360, 390, 768, 1024, 1440 i 1920 px. Treść
 
 Przejdź klawiszem Tab przez aktywne elementy. Focus powinien być widoczny, kolejność logiczna, a przyciski i odnośniki dostępne z klawiatury. Sprawdź zamykanie galerii Escape i powrót do elementu otwierającego. Przy zablokowanym localStorage checklista i panel powinny działać w pamięci otwartej strony i wyjaśniać brak trwałego zapisu.
 
-## Wykonane sprawdzenia lokalne
+## Historyczne sprawdzenia lokalne
 
-Podczas przygotowania samodzielnych modułów 23.11.2026 zakończono powodzeniem osiem zestawów testów logiki oraz kontrole składni JavaScript. W Chromium wykonano 48 kontroli układu: osiem modułów na sześciu wymienionych szerokościach, przy wysokości 820 px. We wszystkich sprawdzonych układach stwierdzono brak poziomego przewijania dokumentu i pojedynczy nagłówek H1.
+Podczas przygotowania wcześniejszego zestawu modułów 23.11.2026 zakończono powodzeniem osiem zestawów testów logiki oraz kontrole składni JavaScript. W Chromium wykonano wtedy 48 kontroli układu: osiem ówczesnych modułów na sześciu wymienionych szerokościach, przy wysokości 820 px. We wszystkich sprawdzonych układach stwierdzono brak poziomego przewijania dokumentu i pojedynczy nagłówek H1.
 
-Sprawdzono główne interakcje, zapis checklisty i przypięć po odświeżeniu, filtrowanie dokumentów i prac, zamykanie galerii oraz podgląd edytora. Rzeczywiście pobrano i odczytano pliki TXT oraz ICS. W edytorze potwierdzono, że wpisane znaczniki HTML nie tworzą elementów w podglądzie.
+Sprawdzono główne interakcje, zapis checklisty i przypięć po odświeżeniu, filtrowanie dokumentów i prac oraz zamykanie galerii. Rzeczywiście pobrano i odczytano pliki TXT oraz ICS. Te wyniki odnoszą się do poprzedniej wersji zestawu i nie obejmują nowego asystenta AI. Pozostawione raporty służą jako historia weryfikacji siedmiu zachowanych modułów.
 
 | Moduł | Raport i pomiary |
 | --- | --- |
@@ -68,11 +68,26 @@ Sprawdzono główne interakcje, zapis checklisty i przypięć po odświeżeniu, 
 | Portfolio uczniów | [QA](../moduly/portfolio-uczniow/QA.md) · [Testy logiki](../moduly/portfolio-uczniow/test-results.txt) · [Pomiary układu](../moduly/portfolio-uczniow/layout-results.json) |
 | Panel ucznia i rodzica | [QA](../moduly/panel-ucznia-rodzica/QA.md) · [Testy logiki](../moduly/panel-ucznia-rodzica/test-results.txt) · [Pomiary układu](../moduly/panel-ucznia-rodzica/layout-results.json) |
 | Sprawy sekretariatu | [QA](../moduly/sprawy-sekretariatu/QA.md) · [Testy logiki](../moduly/sprawy-sekretariatu/test-results.txt) · [Pomiary układu](../moduly/sprawy-sekretariatu/layout-results.json) |
-| Edytor aktualności | [QA](../moduly/edytor-aktualnosci/QA.md) · [Testy logiki](../moduly/edytor-aktualnosci/test-results.txt) · [Pomiary układu](../moduly/edytor-aktualnosci/layout-results.json) |
+
+## Osobne sprawdzenie asystenta AI
+
+[README asystenta](../moduly/asystent-ai/README.md) opisuje scenariusze rozmowy i oczekiwane wyniki. Testy `moduly/asystent-ai/tests.mjs` należy uruchomić razem z całym zestawem. W przeglądarce sprawdź dodatkowo:
+
+- wpisanie własnego pytania, użycie podpowiedzi i rozpoczęcie nowej rozmowy;
+- podgląd panelu na stronie, jego zamknięcie i ponowne otwarcie przyciskiem „Zapytaj szkołę”;
+- rzeczywiste pobranie rozmowy do TXT i zgodność pliku z wyświetlanym wątkiem;
+- zachowanie kontekstu przy dopowiedzeniu oraz zmianę tematu;
+- odnośniki do oficjalnych źródeł, brak wymyślonych terminów i poprawną odpowiedź przy braku wiedzy;
+- czy treść pytania jest wyświetlana jako tekst i nie może utworzyć elementów HTML;
+- czy przy długiej rozmowie można dotrzeć do pola wiadomości na telefonie;
+- obsługę klawiatury, widoczny focus i komunikat nowej odpowiedzi;
+- czy demonstracja jest oznaczona jako lokalna i nie sugeruje aktywnego połączenia z modelem AI.
+
+Używaj danych przykładowych. Brak połączenia z modelem oznacza, że wyniki tej demonstracji nie oceniają jakości przyszłego modelu. Wdrożenie produkcyjne wymaga osobnych prób na zatwierdzonym zestawie pytań, kontroli zgodności odpowiedzi ze źródłami i sprawdzenia zachowania po zmianie dokumentów.
 
 ## Weryfikacja po publikacji
 
-Po opublikowaniu konkretnej wersji należy otworzyć spis funkcjonalności i wszystkie osiem demonstracji z publicznego adresu. Sprawdzenie powinno objąć ładowanie CSS, modułów JavaScript i logo, przejście do modułu i powrót, co najmniej jedną główną interakcję każdego modułu oraz pobieranie plików w opublikowanej witrynie.
+Po opublikowaniu konkretnej wersji należy otworzyć spis funkcjonalności i wszystkie osiem demonstracji z publicznego adresu. Sprawdzenie powinno objąć ładowanie CSS, modułów JavaScript i logo, przejście do modułu i powrót, co najmniej jedną główną interakcję każdego modułu oraz pobieranie plików w opublikowanej witrynie. Nowy asystent powinien otwierać się bezpośrednio pod własnym adresem. Katalog nie powinien zawierać wycofanego edytora ani usuniętych sekcji o wycenie i testowaniu; dawny adres edytora nie powinien udostępniać aktywnego modułu.
 
 Dotychczasowe raporty lokalne nie stanowią potwierdzenia publikacji repozytorium ani włączenia GitHub Pages. Status wdrożenia i jego zweryfikowany adres należy podawać dopiero po zakończeniu tego etapu.
 

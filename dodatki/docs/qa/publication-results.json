@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-23",
+  "catalog": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/",
+  "modules": [
+    {
+      "module": "asystent-kierunku",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/asystent-kierunku/index.html",
+      "result": "Technik fotografii i multimediów",
+      "link": "https://zsp6tom.pl/?page_id=2537"
+    },
+    {
+      "module": "checklista-rekrutacji",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/checklista-rekrutacji/index.html",
+      "beforeReload": "Sprawdzone: 1 z 5 (20%)",
+      "afterReload": "Sprawdzone: 1 z 5 (20%)"
+    },
+    {
+      "module": "dni-otwarte",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/dni-otwarte/index.html",
+      "preview": "10:00 – 11:00 (czas w Polsce)",
+      "icsTimeCorrect": true,
+      "demoMarked": true
+    },
+    {
+      "module": "biblioteka-dokumentow",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/biblioteka-dokumentow/index.html",
+      "query": "maloletnich",
+      "status": "Znalezione materiały: 1 z 8."
+    },
+    {
+      "module": "portfolio-uczniow",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/portfolio-uczniow/index.html",
+      "first": "Praca 1 z 2",
+      "next": "Praca 2 z 2",
+      "closed": true
+    },
+    {
+      "module": "panel-ucznia-rodzica",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/panel-ucznia-rodzica/index.html",
+      "roleSaved": "rodzic",
+      "pinSaved": "true"
+    },
+    {
+      "module": "sprawy-sekretariatu",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/sprawy-sekretariatu/index.html",
+      "title": "Sprawdź oficjalne podanie o duplikat świadectwa",
+      "downloadCorrect": true
+    },
+    {
+      "module": "edytor-aktualnosci",
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/edytor-aktualnosci/index.html",
+      "title": "Przykładowa aktualność testowa",
+      "downloadCorrect": true,
+      "htmlRemainsText": true,
+      "emptyTitleBlocksDownload": true
+    }
+  ],
+  "visualizations": [
+    {
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/oficjalna.html",
+      "italic": false,
+      "sidebarCount": 0,
+      "title": "Tu pomysły stają się umiejętnościami.\n"
+    },
+    {
+      "url": "https://dobrestronynl-hub.github.io/ZSP6/kreatywna.html",
+      "italic": false,
+      "sidebarCount": 0,
+      "title": "Nie tylko uczysz się tworzyć.Tworzysz naprawdę.\n"
+    }
+  ],
+  "scopeDownload": true
+}

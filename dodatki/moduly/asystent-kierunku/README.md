@@ -1,5 +1,11 @@
 # ZSP6: Asystent wyboru kierunku
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/asystent-kierunku/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielna, działająca demonstracja funkcjonalności. Nie jest częścią sidebaru ani kompletną stroną szkoły. Zawiera własny interfejs, instrukcję testowania i opis docelowego wdrożenia.
 
 ## Co robi

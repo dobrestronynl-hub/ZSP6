@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Wypróbuj wizualizację asystenta AI ZSP6. Rozmowa o kierunkach, rekrutacji i dokumentach, źródła odpowiedzi oraz podgląd czatu na stronie szkoły.">
+  <meta name="theme-color" content="#19372a">
+  <title>Asystent AI szkoły | ZSP6</title>
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="module.css">
+  <script type="module" src="module.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html" aria-label="ZSP6, katalog dodatków"><img src="assets/logo.webp" alt="Zespół Szkół Ponadpodstawowych nr 6 w Tomaszowie Mazowieckim" width="440" height="94"></a>
+      <a href="../../index.html">Wróć do dodatków</a>
+    </div>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Rozmowa na stronie ZSP6</p>
+        <h1 id="page-title">Asystent AI szkoły<span aria-hidden="true">.</span></h1>
+      </div>
+      <div class="intro-copy">
+        <p>Pomoc w wyborze kierunku, znalezieniu dokumentu i przygotowaniu do rekrutacji. Zadaj pytanie i zobacz, jak może działać szkolny asystent.</p>
+        <a href="#jak-pomaga">Poznaj zastosowania</a>
+      </div>
+    </section>
+
+    <section class="experience" id="rozmowa" aria-labelledby="experience-title">
+      <div class="experience-bar">
+        <h2 id="experience-title">Wypróbuj rozmowę</h2>
+        <div class="view-controls" role="group" aria-label="Sposób prezentacji asystenta">
+          <button class="view-button" id="conversation-view" type="button" aria-pressed="true" aria-controls="conversation-slot site-preview" disabled>Rozmowa</button>
+          <button class="view-button" id="website-view" type="button" aria-pressed="false" aria-controls="conversation-slot site-preview" disabled>Pokaż na stronie</button>
+        </div>
+      </div>
+
+      <div class="experience-grid" id="conversation-layout">
+        <aside class="conversation-guide" aria-labelledby="guide-title">
+          <p class="eyebrow">Pytanie. Odpowiedź. Kolejny krok.</p>
+          <h3 id="guide-title">Mniej szukania.<br>Więcej jasności.</h3>
+          <p>Napisz tak, jak zapytałbyś w sekretariacie. Możesz też zacząć od gotowego pytania.</p>
+          <dl class="guide-list">
+            <div><dt>Możesz dopytać</dt><dd>Najpierw kierunek, potem dokumenty. Rozmowa pamięta wybrany temat.</dd></div>
+            <div><dt>Wiesz, gdzie sprawdzić</dt><dd>Odnośniki przy odpowiedzi prowadzą do oficjalnych informacji szkoły.</dd></div>
+            <div><dt>Widzisz następny krok</dt><dd>Program kierunku, zasady rekrutacji lub kontakt z sekretariatem.</dd></div>
+          </dl>
+          <a class="guide-link" href="#jak-dziala">Jak będzie działać AI?</a>
+        </aside>
+
+        <div id="conversation-slot" class="conversation-slot">
+          <section class="chat-card" id="chat-panel" aria-labelledby="chat-title">
+            <header class="chat-header">
+              <span class="assistant-mark" aria-hidden="true">6</span>
+              <div class="chat-heading"><h3 id="chat-title">Asystent ZSP6</h3><p>Tryb demonstracyjny · bez modelu AI</p></div>
+              <button id="close-widget" class="close-widget" type="button" aria-label="Zamknij okno asystenta" hidden><span aria-hidden="true">×</span></button>
+            </header>
+            <div class="chat-tools">
+              <button class="text-button" id="reset-chat" type="button" disabled>Nowa rozmowa</button>
+              <button class="text-button" id="save-chat" type="button" disabled>Zapisz rozmowę</button>
+            </div>
+            <div id="chat-log" class="chat-log" role="log" aria-label="Przebieg rozmowy z asystentem" aria-live="polite" aria-relevant="additions" tabindex="0">
+              <article class="message assistant-message"><p class="speaker">Asystent ZSP6</p><h4>O co chcesz zapytać?</h4><p>Wybierz pytanie albo napisz własne. Możesz poznać kierunki, sprawdzić przygotowania do rekrutacji i znaleźć szkolne dokumenty.</p></article>
+            </div>
+            <form class="chat-form" id="chat-form" autocomplete="off">
+              <label for="question">Twoje pytanie</label>
+              <div class="composer">
+                <textarea id="question" rows="2" maxlength="600" required placeholder="Zapytaj o szkołę…" aria-describedby="question-hint question-error" disabled></textarea>
+                <button class="send-button" id="send-question" type="submit" aria-label="Wyślij pytanie" disabled>Wyślij</button>
+              </div>
+              <div class="composer-meta"><span id="question-hint">Bez danych osobowych. Enter wysyła, Shift + Enter dodaje wiersz.</span><span id="character-count" aria-label="Liczba znaków">0/600</span></div>
+              <p id="question-error" class="question-error" role="alert" hidden></p>
+            </form>
+            <p id="chat-status" class="sr-only" role="status"></p>
+          </section>
+        </div>
+      </div>
+
+      <div id="site-preview" class="site-preview" aria-label="Wizualizacja asystenta na stronie szkoły" hidden>
+        <div class="preview-caption"><span>Podgląd osadzenia na stronie</span><span>Ta sama rozmowa, w oknie czatu</span></div>
+        <div class="school-preview">
+          <div class="school-preview-header"><img src="assets/logo.webp" alt="Logo ZSP6" width="440" height="94"><a href="https://zsp6tom.pl/?page_id=2537" target="_blank" rel="noopener noreferrer">Rekrutacja</a></div>
+          <div class="school-preview-main">
+            <p class="eyebrow">Liceum Sztuk Plastycznych · Technikum nr 5</p>
+            <p class="school-preview-title">Tu pomysły stają się umiejętnościami.</p>
+            <figure><img src="https://zsp6tom.pl/wp-content/uploads/2024/03/IMG_20240305_091959-768x576.jpg" alt="Uczennice ZSP6 pracują przy sztalugach w pracowni rysunku i malarstwa" width="768" height="576" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Pracownia rysunku i malarstwa · fotografia ZSP6</figcaption></figure>
+            <p class="school-preview-footnote">Masz pytanie? Asystent jest dostępny w rogu strony.</p>
+          </div>
+        </div>
+        <div id="widget-dock" class="widget-dock"></div>
+        <button id="widget-launcher" class="widget-launcher" type="button" aria-expanded="true" aria-controls="chat-panel"><span class="launcher-mark" aria-hidden="true">6</span><span>Zapytaj szkołę</span><span id="launcher-symbol" aria-hidden="true">−</span></button>
+      </div>
+      <p class="demo-caption">Interaktywna wizualizacja korzysta z przygotowanej bazy odpowiedzi. Nie łączy się z modelem AI ani systemami szkoły. Rozmowa pozostaje w pamięci tej karty i znika po odświeżeniu.</p>
+      <noscript><p class="no-script">Włącz JavaScript, aby wypróbować rozmowę. Możesz też przejść bezpośrednio do <a href="https://zsp6tom.pl/?page_id=2537">rekrutacji</a>, <a href="https://zsp6tom.pl/?page_id=3042">dokumentów ucznia</a> lub <a href="https://zsp6tom.pl/?page_id=318">kontaktu ze szkołą</a>.</p></noscript>
+    </section>
+
+    <section id="jak-pomaga" class="benefits-section" aria-labelledby="benefits-title">
+      <div class="section-lead"><p class="eyebrow">Po co szkole taki asystent?</p><h2 id="benefits-title">Odpowiedź tam,<br> gdzie pojawia się pytanie.</h2><p>Osoba odwiedzająca stronę nie musi znać nazw działów ani właściwego formularza. Zaczyna od swojej sprawy.</p></div>
+      <div class="benefit-list">
+        <article><p class="audience">Kandydat</p><h3>Łatwiej porównuje kierunki</h3><p>Pyta o fotografię, grafikę lub plastykę. Poznaje różnice, dopytuje o naukę i przechodzi do programu oraz zasad rekrutacji.</p></article>
+        <article><p class="audience">Rodzic i uczeń</p><h3>Szybciej trafia do informacji</h3><p>Dowiadują się, gdzie sprawdzić dokumenty, kalendarz lub informacje dla rodziców. Rozmowa prowadzi do właściwej strony szkoły.</p></article>
+        <article><p class="audience">Sekretariat</p><h3>Ma wsparcie w powtarzalnych pytaniach</h3><p>Asystent może wyjaśnić podstawowe kroki przed kontaktem ze szkołą. Nietypową sprawę kieruje do pracownika, razem z właściwym odnośnikiem.</p></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="jak-dziala" aria-labelledby="how-title">
+      <div class="section-lead"><p class="eyebrow">Od wizualizacji do szkolnej pomocy</p><h2 id="how-title">AI oparte na wiedzy szkoły.</h2></div>
+      <div class="how-content">
+        <p class="how-intro">W docelowym rozwiązaniu model AI będzie korzystać z zatwierdzonych treści ZSP6. Ma rozumieć pytania zadane własnymi słowami, utrzymywać kontekst rozmowy i wskazywać źródła odpowiedzi.</p>
+        <dl class="how-list">
+          <div><dt>Jedna aktualizowana baza</dt><dd>Oferta, rekrutacja, szkolne dokumenty i kontakt. Zmiany treści powinny trafiać także do wiedzy asystenta.</dd></div>
+          <div><dt>Odpowiedź z uzasadnieniem</dt><dd>Obok wyjaśnienia pojawia się źródło i przydatny odnośnik. Użytkownik może sprawdzić informację u szkoły.</dd></div>
+          <div><dt>Jasne granice pomocy</dt><dd>Przy braku potwierdzonych informacji asystent mówi o tym wprost. Sprawy indywidualne przekazuje do kontaktu z sekretariatem.</dd></div>
+        </dl>
+        <details class="implementation-details"><summary>Co działa teraz, a co obejmuje wdrożenie AI?</summary><div><h3>W tej demonstracji</h3><p>Działają przygotowane tematy rozmów, pytania uzupełniające, porównanie kierunków, źródła, zapis rozmowy do pliku i podgląd okna na stronie. Odpowiedź dobiera lokalna logika, bez modelu językowego.</p><h3>W docelowym wdrożeniu</h3><p>Potrzebne są połączenie z modelem AI po stronie serwera, zatwierdzona baza wiedzy, sposób jej aktualizacji i testy jakości odpowiedzi. Można połączyć ją z treściami strony lub CMS szkoły. Dostęp do ocen, kont uczniów czy składanie wniosków nie należą do tej prezentacji.</p></div></details>
+      </div>
+    </section>
+
+    <section class="try-section" aria-labelledby="try-title">
+      <div><p class="eyebrow">Sprawdź na przykładzie</p><h2 id="try-title">Trzy sprawy. Jedno okno.</h2><p>Uruchom rozmowę i dopytaj własnymi słowami.</p></div>
+      <ol class="scenario-list">
+        <li><div><h3>Wybór kierunku</h3><p>Zapytaj o fotografię, a potem „A jakie dokumenty?”. Asystent powinien zachować temat rozmowy i pokazać informacje o rekrutacji.</p></div><button type="button" class="scenario-button" data-question="Interesuje mnie fotografia. Jaki kierunek wybrać?" disabled>Wypróbuj wybór kierunku</button></li>
+        <li><div><h3>Szkolny dokument</h3><p>Zapytaj o zaświadczenie. Sprawdź, czy odpowiedź pomaga przygotować sprawę i prowadzi do kontaktu z sekretariatem.</p></div><button type="button" class="scenario-button" data-question="Potrzebuję zaświadczenia ze szkoły. Gdzie je znaleźć?" disabled>Wypróbuj dokumenty</button></li>
+        <li><div><h3>Termin do potwierdzenia</h3><p>Zapytaj o kolejny dzień otwarty. Gdy baza nie zawiera terminu, asystent powinien wskazać oficjalne ogłoszenia, bez wymyślania daty.</p></div><button type="button" class="scenario-button" data-question="Kiedy jest kolejny dzień otwarty?" disabled>Wypróbuj pytanie o termin</button></li>
+      </ol>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><p>ZSP6 · wizualizacja asystenta AI</p><div><a href="../../index.html">Wszystkie dodatki</a><a href="https://dobrestronynl-hub.github.io/ZSP6/">Wizualizacje szkoły</a><a href="https://zsp6tom.pl/" target="_blank" rel="noopener noreferrer">Oficjalna strona ZSP6</a></div></div></footer>
+</body>
+</html>

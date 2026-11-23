@@ -1,5 +1,11 @@
 # ZSP6: Osobista checklista rekrutacji
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/checklista-rekrutacji/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielna demonstracja listy przygotowań dla kandydatów i rodziców. Moduł ma osobny interfejs w katalogu `moduly/checklista-rekrutacji` repozytorium `Dodatki-ZSP6` i działa niezależnie od głównej wizualizacji ZSP6.
 
 ## Co robi

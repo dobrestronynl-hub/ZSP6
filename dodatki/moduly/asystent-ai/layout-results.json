@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-23",
+  "browser": "Chromium",
+  "method": "Responsive same-origin iframe; viewport widths in CSS pixels",
+  "checks": [
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 360,
+      "scrollWidth": 345,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "conversation"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "conversation"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "conversation"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "conversation"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "conversation"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 1920,
+      "scrollWidth": 1905,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "conversation"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 360,
+      "scrollWidth": 345,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "widget"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "widget"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "widget"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "widget"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "widget"
+    },
+    {
+      "page": "Asystent AI szkoły | ZSP6",
+      "width": 1920,
+      "scrollWidth": 1905,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": true,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "widget"
+    },
+    {
+      "page": "Dodatki do strony ZSP6 | Interaktywne demonstracje",
+      "width": 360,
+      "scrollWidth": 345,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": null,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "catalogue"
+    },
+    {
+      "page": "Dodatki do strony ZSP6 | Interaktywne demonstracje",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": null,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "catalogue"
+    },
+    {
+      "page": "Dodatki do strony ZSP6 | Interaktywne demonstracje",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": null,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "catalogue"
+    },
+    {
+      "page": "Dodatki do strony ZSP6 | Interaktywne demonstracje",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": null,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "catalogue"
+    },
+    {
+      "page": "Dodatki do strony ZSP6 | Interaktywne demonstracje",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": null,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "catalogue"
+    },
+    {
+      "page": "Dodatki do strony ZSP6 | Interaktywne demonstracje",
+      "width": 1920,
+      "scrollWidth": 1905,
+      "overflow": false,
+      "offscreen": [],
+      "visibleChat": null,
+      "smallText": [],
+      "brokenImages": [],
+      "mode": "catalogue"
+    }
+  ]
+}

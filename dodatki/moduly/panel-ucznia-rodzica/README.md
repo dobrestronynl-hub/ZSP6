@@ -1,5 +1,11 @@
 # ZSP6. Panel ucznia i rodzica
 
+## Otwórz działającą demonstrację
+
+[Przetestuj funkcję w przeglądarce](https://dobrestronynl-hub.github.io/ZSP6/dodatki/moduly/panel-ucznia-rodzica/index.html)
+
+Publiczny podgląd pokazuje interfejs, opis zastosowania i instrukcję testowania. Nie wymaga pobierania kodu ani logowania.
+
 Samodzielny punkt startowy do publicznych informacji szkoły. Odbiorca wybiera widok i przypina najczęściej używane odnośniki.
 
 ## Co to robi
