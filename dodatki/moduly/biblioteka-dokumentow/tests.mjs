@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {documents,normalize,findDocuments} from './logic.mjs';
+assert.equal(normalize('MAŁOLETNICH Świadectwo'),'maloletnich swiadectwo');
+assert.equal(findDocuments('maloletnich')[0].id,'ochrona');
+assert.deepEqual(findDocuments('świadectwa duplikatu').map(x=>x.id),['duplikat']);
+assert.deepEqual(findDocuments('  ŚWIADECTWA    DUPLIKATU  ').map(x=>x.id),['duplikat']);
+assert.ok(findDocuments('','kandydat').some(x=>x.id==='ochrona'));
+assert.ok(!findDocuments('','kandydat').some(x=>x.id==='podreczniki'));
+assert.deepEqual(findDocuments('rekrutacja','uczen'),[]);
+assert.deepEqual(findDocuments('nieistniejacy dokument xyz'),[]);
+assert.deepEqual(findDocuments('','__proto__'),[]);
+assert.equal(findDocuments().length,8);
+assert.equal(new Set(documents.map(x=>x.id)).size,documents.length);
+assert.ok(documents.every(x=>new URL(x.url).hostname==='zsp6tom.pl'));
+console.log('PASS: 12 kontroli wyszukiwania, polskich znaków, odbiorców i danych źródłowych.');

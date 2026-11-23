@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Edytor aktualności | Demonstracja funkcjonalności ZSP6</title>
+  <meta name="description" content="Przetestuj samodzielny edytor aktualności ZSP6: wpisywanie treści, podgląd na żywo, kategorie i pobranie lokalnego szkicu. Poznaj zakres docelowego wdrożenia.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="assets/base.css"><link rel="stylesheet" href="module.css">
+  <script type="module" src="module.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<header class="site-header"><div class="wrap"><a class="brand" href="../../index.html" aria-label="ZSP6, katalog dodatków"><img src="assets/logo.webp" width="440" height="94" alt="Zespół Szkół Ponadpodstawowych nr 6 w Tomaszowie Mazowieckim"></a><a href="../../index.html">Wróć do dodatków</a></div></header>
+<main id="main" class="wrap">
+  <section class="intro" aria-labelledby="page-title"><p class="eyebrow">Osobny moduł do przetestowania</p><h1 id="page-title">Edytor aktualności</h1><p>Przygotuj wpis i zobacz jego wygląd podczas pisania. Sprawdź, jak szkolna redakcja mogłaby porządkować treść przed publikacją.</p><p class="note">Demonstracja lokalna. Wpis nie zostaje opublikowany ani wysłany. Treść znika po odświeżeniu strony, chyba że wcześniej pobierzesz szkic.</p></section>
+
+  <section class="demo" aria-labelledby="demo-title"><h2 id="demo-title">Napisz i obejrzyj przykładowy wpis</h2><p>Po lewej edytujesz treść, po prawej widzisz podgląd. Na telefonie podgląd znajduje się pod polami. Możesz używać zwykłego tekstu i akapitów.</p>
+    <noscript><p class="note">Edytor i pobieranie szkicu wymagają JavaScript. Opis zastosowania i instrukcja testów pozostają dostępne poniżej.</p></noscript>
+    <div id="editor-workspace" class="editor-workspace" hidden>
+      <form id="editor-form" class="editor-form" aria-label="Treść szkicu aktualności">
+        <label class="field" for="article-title">Tytuł wpisu<input id="article-title" type="text" maxlength="220" autocomplete="off" aria-describedby="title-count"><span id="title-count">0 / 110 znaków</span></label>
+        <label class="field" for="article-category">Kategoria<select id="article-category"><option>Życie szkoły</option><option>Projekty</option><option>Rekrutacja</option></select></label>
+        <label class="field" for="article-body">Treść aktualności<textarea id="article-body" rows="10" maxlength="3000" aria-describedby="body-count"></textarea><span id="body-count">0 / 1500 znaków</span></label>
+        <div class="editor-actions"><button class="button" id="download-draft" type="button" disabled>Pobierz szkic TXT</button><button class="button button-secondary" id="reset-example" type="button">Przywróć przykład</button></div>
+        <p id="export-hint" class="note">Uzupełnij tytuł i treść, aby pobrać szkic.</p><p class="note">„Przywróć przykład” zastępuje wpisane zmiany treścią demonstracyjną. Nie wpisuj w tym podglądzie danych osobowych.</p>
+      </form>
+      <article id="article-preview" class="article-preview" aria-label="Podgląd nieopublikowanej aktualności"><p class="preview-label">Podgląd. Nieopublikowany szkic</p><p id="preview-category" class="preview-category">Życie szkoły</p><h3 id="preview-title">Tutaj pojawi się tytuł</h3><div id="preview-body" class="preview-body">Tutaj pojawi się treść aktualności.</div><p class="preview-footnote">To przykład wyglądu treści. Nie jest ogłoszeniem szkoły.</p></article>
+    </div>
+    <p id="editor-status" class="status" role="status" aria-live="polite"></p>
+  </section>
+
+  <div class="detail-grid">
+    <section class="explanation" aria-labelledby="what-title"><h2 id="what-title">Co to robi?</h2><p>Edytor łączy wpisywanie tytułu i tekstu z podglądem aktualności. Kategoria pomaga uporządkować późniejszą publikację. Liczniki wskazują limit treści, a pobieranie TXT pozwala zachować szkic lub przekazać go osobie odpowiedzialnej za stronę.</p><p>Tekst jest pokazywany dosłownie. Znaczniki HTML wpisane do pola nie uruchamiają kodu i nie zmieniają struktury strony.</p></section>
+    <section class="explanation" aria-labelledby="benefit-title"><h2 id="benefit-title">Jak ułatwia pracę?</h2><p>Nauczyciel lub redaktor może sprawdzić długość nagłówka i układ akapitów jeszcze podczas pisania. Podgląd ułatwia korektę treści przed przekazaniem jej do publikacji. Stały układ pomaga zachować spójność wiadomości przygotowywanych przez różne osoby.</p><p>Plik TXT może służyć do konsultacji szkicu. Automatyczne zapisywanie, zatwierdzanie przez drugą osobę i publikacja pojawiłyby się dopiero w pełnym systemie redakcyjnym.</p></section>
+  </div>
+
+  <section class="explanation" aria-labelledby="implementation-title"><h2 id="implementation-title">Co obejmowałoby wdrożenie?</h2><ul><li>CMS z logowaniem, rolami redaktora i administratora oraz przechowywaniem szkiców.</li><li>Uzgodnione kategorie, dodawanie zdjęć i opisy alternatywne.</li><li>Podgląd wpisu w docelowym układzie strony oraz kontrolowane publikowanie.</li><li>Opcjonalnie akceptacja przed publikacją, historia zmian i planowanie daty wpisu.</li><li>Kopie zapasowe oraz osoba odpowiedzialna za aktualizacje i zarządzanie dostępem.</li></ul><p class="note">Ta demonstracja sprawdza sposób pracy z treścią. Nie zawiera kont, serwera, bazy aktualności, wysyłania plików ani przycisku udającego publikację.</p></section>
+
+  <section class="explanation" aria-labelledby="test-title"><h2 id="test-title">Przetestuj sam</h2><ol class="test-list"><li>Zmień tytuł na „Warsztaty projektowania”. Podgląd powinien pokazać dokładnie ten tytuł.</li><li>Wybierz kategorię „Projekty” i wpisz dwa akapity. Kategoria oraz podział akapitów powinny pojawić się w podglądzie.</li><li>Wpisz tekst <span class="test-sample">&lt;strong&gt;Przykład&lt;/strong&gt;</span>. Powinien pozostać widocznym tekstem, bez pogrubienia i bez wykonania HTML.</li><li>Wyczyść tytuł lub treść. Przycisk „Pobierz szkic TXT” powinien być nieaktywny. Po uzupełnieniu obu pól pobierz plik i porównaj go z podglądem.</li><li>Kliknij „Przywróć przykład”. Powinny wrócić treści demonstracyjne, a focus przejść do tytułu.</li><li>Sprawdź stronę klawiaturą i przy szerokości 360 px. Pola oraz przyciski powinny być dostępne, a podgląd mieścić się pod formularzem bez poziomego przewijania.</li></ol></section>
+
+  <section class="explanation" aria-labelledby="materials-title"><h2 id="materials-title">Materiały i granice demonstracji</h2><p>Tekst początkowy jest jawnie oznaczonym przykładem interfejsu, a nie rzeczywistą wiadomością szkoły. Logo pochodzi z materiałów przekazanych do projektu ZSP6. Projekt nie pobiera danych z oficjalnej strony i nie wymaga żadnych zewnętrznych skryptów.</p><p>Limity demonstracji to 110 znaków tytułu i 1500 znaków treści, liczone jako punkty kodowe Unicode. Emoji i polskie litery nie są rozcinane przy ograniczaniu tekstu. Szkic jest przechowywany wyłącznie w otwartym oknie; pobrany plik pozostaje na urządzeniu użytkownika.</p></section>
+</main>
+<footer class="site-footer"><div class="wrap"><p>ZSP6 · Samodzielna demonstracja funkcjonalności</p><a href="README.md">Opis projektu i testów</a></div></footer>
+</body></html>

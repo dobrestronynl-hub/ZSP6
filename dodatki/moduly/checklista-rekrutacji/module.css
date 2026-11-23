@@ -1,0 +1,11 @@
+.progress-line {display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;border-top:1px solid #c6d0c8;border-bottom:1px solid #c6d0c8;padding:1.25rem 0;margin:1.5rem 0}
+.progress-line h3,.progress-line p {margin:0}
+progress {display:block;width:100%;height:14px;accent-color:#19372a;margin:1rem 0}
+.task-list {padding:0;list-style:none;margin:1.5rem 0}
+.task-list li {padding:1.35rem 0;border-bottom:1px solid #c6d0c8}
+.task-label {display:grid;grid-template-columns:24px 1fr;gap:.85rem;align-items:start;font-weight:700;cursor:pointer}
+.task-label input {width:22px;height:22px;min-height:22px;margin:3px 0 0;accent-color:#19372a}
+.task-list p,.task-list li>a {margin-left:calc(24px + .85rem)}
+.task-list p {max-width:75ch;margin-top:.55rem;margin-bottom:.65rem}
+.actions {display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0}
+@media(max-width:620px){.progress-line{grid-template-columns:1fr;gap:.6rem}.actions .button{width:100%}}

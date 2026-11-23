@@ -10,4 +10,8 @@ for filename in ("index.html", "oficjalna.html", "kreatywna.html"):
 if (OUT / "assets").exists():
     shutil.rmtree(OUT / "assets")
 shutil.copytree(ROOT / "assets", OUT / "assets")
-print("Built index.html, oficjalna.html, kreatywna.html and assets/ into dist/.")
+if (ROOT / "dodatki").is_dir():
+    if (OUT / "dodatki").exists():
+        shutil.rmtree(OUT / "dodatki")
+    shutil.copytree(ROOT / "dodatki", OUT / "dodatki")
+print("Built the three ZSP6 pages, assets/ and published dodatki/ when present into dist/.")

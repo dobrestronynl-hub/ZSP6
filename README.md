@@ -24,6 +24,8 @@ Na życzenie użytkownika usunięto panel dodatkowych funkcji z obu wizualizacji
 
 Dodatkowe demonstracje rozwijane są jako osiem niezależnych projektów: asystent kierunku, checklista rekrutacji, dni otwarte, biblioteka dokumentów, portfolio, panel ucznia i rodzica, sprawy sekretariatu oraz edytor aktualności. Nie są ładowane przez tę stronę i nie mają wspólnego panelu wyceny. Każdy projekt ma własny opis działania, korzyści, granic demonstracji i scenariuszy testowania.
 
+[Katalog interaktywnych dodatków](https://dobrestronynl-hub.github.io/ZSP6/dodatki/) jest publikowany w osobnym katalogu `dodatki/` tego hostingu. Każdy moduł ma własny adres i działa bez otwierania kodu na GitHubie. Źródła oraz dokumentacja są utrzymywane w osobnym repozytorium [Dodatki-ZSP6](https://github.com/dobrestronynl-hub/Dodatki-ZSP6). Katalog `dodatki/` jest kopią przygotowanego tam pakietu `dist/`, używaną wyłącznie do publikacji. Zmiany modułów należy wykonywać w repozytorium źródłowym, a następnie odświeżyć tę kopię. Dodatki nie tworzą sidebaru i nie są automatycznie dołączane do obu wizualizacji.
+
 ## Uruchomienie i build
 
 Projekt wykorzystuje HTML, CSS i JavaScript bez frameworka, bundlera i zewnętrznych skryptów. Do kontroli potrzebne są Python 3 i Node.js; serwowanie strony nie wymaga Node.js.
@@ -36,7 +38,7 @@ python3 scripts/build.py
 python3 -m http.server 8000
 ```
 
-Podgląd lokalny: [http://localhost:8000/](http://localhost:8000/). Build kopiuje trzy strony i katalog `assets/` do `dist/`; nie publikuje strony. GitHub Pages może serwować statyczne pliki z katalogu głównego repozytorium zgodnie z istniejącą konfiguracją publikacji.
+Podgląd lokalny: [http://localhost:8000/](http://localhost:8000/). Build kopiuje trzy strony, katalog `assets/` oraz obecną kopię `dodatki/` do `dist/`; nie publikuje strony. GitHub Pages może serwować statyczne pliki z katalogu głównego repozytorium zgodnie z istniejącą konfiguracją publikacji.
 
 Główne zasoby to `assets/site.css` i `assets/site.js`. Oryginalny znak z wcześniejszych materiałów projektu wydzielono do `assets/logo.webp`; nie zastąpiono go nowym logo.
 

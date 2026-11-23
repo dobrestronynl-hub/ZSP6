@@ -1,0 +1,8 @@
+.meeting-fields {display:grid;grid-template-columns:1fr 1fr;gap:1.35rem 1.5rem}
+.event-preview {border-left:4px solid #e76415;background:#f2f5f2;padding:1.5rem 1.75rem;margin:1.75rem 0}
+.event-preview h3 {font-size:1.55rem;line-height:1.25;margin:.35rem 0 1.2rem}
+.event-preview dl {display:grid;grid-template-columns:120px 1fr;gap:.6rem 1rem;margin:0}
+.event-preview dt {font-weight:700}
+.event-preview dd {margin:0}
+.event-preview[hidden]{display:none}
+@media(max-width:620px){.meeting-fields{grid-template-columns:1fr}.event-preview{padding:1.1rem}.event-preview dl{grid-template-columns:1fr;gap:.2rem}.event-preview dd{margin-bottom:.65rem}}

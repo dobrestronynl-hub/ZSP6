@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sprawy sekretariatu | Demonstracja funkcjonalności ZSP6</title>
+  <meta name="description" content="Samodzielna demonstracja przewodnika po sprawach sekretariatu ZSP6. Wybierz temat, poznaj kolejne kroki i pobierz instrukcję do przetestowania.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="assets/base.css"><link rel="stylesheet" href="module.css">
+  <script type="module" src="module.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<header class="site-header"><div class="wrap"><a class="brand" href="../../index.html" aria-label="ZSP6, katalog dodatków"><img src="assets/logo.webp" width="440" height="94" alt="Zespół Szkół Ponadpodstawowych nr 6 w Tomaszowie Mazowieckim"></a><a href="../../index.html">Wróć do dodatków</a></div></header>
+<main id="main" class="wrap">
+  <section class="intro" aria-labelledby="page-title"><p class="eyebrow">Osobny moduł do przetestowania</p><h1 id="page-title">Sprawy sekretariatu</h1><p>Wybierz, z czym przychodzisz. Otrzymasz wskazówki, właściwy odnośnik i przykład pytania, z którym warto skontaktować się ze szkołą.</p><p class="note">Demonstracja przewodnika. Moduł nie przyjmuje zgłoszeń ani dokumentów.</p></section>
+
+  <section class="demo" aria-labelledby="demo-title"><h2 id="demo-title">Znajdź sposób załatwienia sprawy</h2>
+    <div id="office-controls" class="office-controls" hidden><label class="field" for="office-topic">Temat sprawy<select id="office-topic"><option value="kandydat">Rekrutacja i wybór szkoły</option><option value="zaswiadczenie">Zaświadczenie lub inny dokument</option><option value="swiadectwo">Duplikat świadectwa</option><option value="legitymacja">Duplikat legitymacji</option><option value="wspolpraca">Propozycja współpracy ze szkołą</option></select></label><button id="download-instructions" class="button" type="button">Pobierz instrukcję TXT</button></div>
+    <p id="office-status" class="status" role="status" aria-live="polite"></p>
+    <section id="office-result" class="office-result" aria-labelledby="office-result-title"><h3 id="office-result-title">Zacznij od informacji szkoły</h3><p>Rekrutacja, dokumenty i kontakt są dostępne w oficjalnej witrynie. Wybór tematu i pobranie dopasowanej instrukcji wymagają JavaScript.</p><p><a href="https://zsp6tom.pl/?page_id=2537" target="_blank" rel="noopener noreferrer">Informacje o rekrutacji</a></p></section>
+    <div class="office-contact"><h3>Kontakt do szkoły</h3><p><a href="tel:+48447237719">44 723 77 19</a></p><p><a href="mailto:zsp6tomaszow@wp.pl">zsp6tomaszow@wp.pl</a></p><p><a href="https://zsp6tom.pl/?page_id=318" target="_blank" rel="noopener noreferrer">Sprawdź aktualne dane kontaktowe w oficjalnej witrynie</a></p><p class="note">Wymagane dokumenty, opłaty i terminy potwierdza szkoła. Odnośniki są migawką z 23.11.2026 i nie aktualizują się automatycznie.</p></div>
+  </section>
+
+  <div class="detail-grid">
+    <section class="explanation" aria-labelledby="what-title"><h2 id="what-title">Co to robi?</h2><p>Przewodnik zamienia ogólną stronę kontaktową w uporządkowane ścieżki dla najczęstszych tematów. Do każdego tematu przypisuje krótki opis, kolejne kroki i źródło. Wybraną instrukcję można pobrać i zachować przed rozmową z sekretariatem.</p><p>Każda ścieżka działa osobno. Zmiana tematu podmienia całą instrukcję, więc informacje o rekrutacji nie mieszają się z dokumentami dla obecnych uczniów.</p></section>
+    <section class="explanation" aria-labelledby="benefit-title"><h2 id="benefit-title">Jak ułatwia pracę?</h2><p>Uczeń, rodzic lub kandydat szybciej trafia do właściwej informacji i może przygotować konkretne pytanie. Sekretariat może odsyłać do jednej uporządkowanej instrukcji zamiast za każdym razem opisywać, od czego zacząć.</p><p>Korzyść zależy od jakości i aktualności treści. Moduł pomaga ograniczać powtarzalne pytania, ale nie zastępuje pracownika ani decyzji szkoły.</p></section>
+  </div>
+
+  <section class="explanation" aria-labelledby="implementation-title"><h2 id="implementation-title">Co obejmowałoby wdrożenie?</h2><ul><li>Uzgodnienie listy spraw i treści instrukcji z sekretariatem.</li><li>Przypisanie aktualnych dokumentów, kontaktów oraz osoby odpowiedzialnej za aktualizacje.</li><li>Możliwość redagowania ścieżek w panelu strony.</li><li>Opcjonalnie osobny system zgłoszeń z załącznikami, statusem i powiadomieniami. To dodatkowy zakres wymagający serwera, uprawnień i zasad przechowywania danych.</li></ul><p class="note">W tej demonstracji wybór tematu pozostaje w otwartej stronie. Nie ma rejestracji spraw, nadawania numerów ani automatycznego wysyłania e-maili.</p></section>
+
+  <section class="explanation" aria-labelledby="test-title"><h2 id="test-title">Przetestuj sam</h2><ol class="test-list"><li>Wybierz „Duplikat świadectwa”. Powinny pojawić się instrukcja i odnośnik do szkolnego PDF.</li><li>Przełącz na „Propozycja współpracy ze szkołą”. Wskazówki powinny dotyczyć celu, odbiorców i terminu współpracy.</li><li>Pobierz instrukcję TXT. Otwórz plik i sprawdź, czy opisuje wybrany temat i zawiera informację o demonstracji.</li><li>Przejdź po elementach klawiszem Tab, zmień wybór klawiszami strzałek i uruchom pobranie Enterem. Focus powinien pozostawać widoczny.</li><li>Otwórz stronę przy szerokości 360 px. Formularz, odnośniki i przycisk powinny mieścić się bez poziomego przewijania.</li><li>Odśwież stronę. Powinien wrócić początkowy temat rekrutacji. Żadne zgłoszenie nie powinno zostać utworzone.</li></ol></section>
+
+  <section class="explanation" aria-labelledby="sources-title"><h2 id="sources-title">Źródła i materiały</h2><ul class="sources-list"><li><a href="https://zsp6tom.pl/?page_id=318" target="_blank" rel="noopener noreferrer">Oficjalny kontakt do ZSP6</a></li><li><a href="https://zsp6tom.pl/?page_id=2537" target="_blank" rel="noopener noreferrer">Rekrutacja</a></li><li><a href="https://zsp6tom.pl/?page_id=3042" target="_blank" rel="noopener noreferrer">Informacje i dokumenty dla uczniów</a></li></ul><p>Odnośnik do podania o duplikat świadectwa został wcześniej sprawdzony wraz z treścią PDF. Dla dokumentu DOC dotyczącego legitymacji potwierdzono odnośnik i typ pliku; ta demonstracja nie interpretuje jego treści. Zachowano logo przekazane w projekcie ZSP6.</p></section>
+</main>
+<footer class="site-footer"><div class="wrap"><p>ZSP6 · Samodzielna demonstracja funkcjonalności</p><a href="README.md">Opis projektu i testów</a></div></footer>
+</body></html>

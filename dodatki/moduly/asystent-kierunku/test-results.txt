@@ -1,0 +1,10 @@
+PASS: four courses and both next steps; invalid/inherited keys rejected; links remain official; results do not mutate catalogue.
+✔ tests.mjs (138.50442ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 150.752542

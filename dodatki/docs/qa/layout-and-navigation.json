@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-23",
+  "catalog": [
+    {
+      "page": "index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "#dodatki"
+    },
+    {
+      "page": "index.html",
+      "width": 390,
+      "client": 375,
+      "scroll": 375,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "#dodatki"
+    },
+    {
+      "page": "index.html",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "#dodatki"
+    },
+    {
+      "page": "index.html",
+      "width": 1024,
+      "client": 1009,
+      "scroll": 1009,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "#dodatki"
+    },
+    {
+      "page": "index.html",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "#dodatki"
+    },
+    {
+      "page": "index.html",
+      "width": 1920,
+      "client": 1905,
+      "scroll": 1905,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "#dodatki"
+    }
+  ],
+  "modules": [
+    {
+      "page": "moduly/asystent-kierunku/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Asystent wyboru kierunku",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/biblioteka-dokumentow/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Biblioteka dokumentów",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/checklista-rekrutacji/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Osobista checklista rekrutacji",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/dni-otwarte/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Dni otwarte i spotkania",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/edytor-aktualnosci/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Edytor aktualności",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/panel-ucznia-rodzica/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Panel ucznia i rodzica",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/portfolio-uczniow/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Portfolio uczniów",
+      "backHref": "../../index.html",
+      "returned": true
+    },
+    {
+      "page": "moduly/sprawy-sekretariatu/index.html",
+      "width": 360,
+      "client": 345,
+      "scroll": 345,
+      "overflow": false,
+      "h1": 1,
+      "italic": false,
+      "back": "../../index.html",
+      "title": "Sprawy sekretariatu",
+      "backHref": "../../index.html",
+      "returned": true
+    }
+  ]
+}

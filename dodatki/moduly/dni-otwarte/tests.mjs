@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {warsawToUtc,eventDetails,calendarFile,foldLine,escapeText,defaultDate} from './logic.mjs';
+
+assert.equal(warsawToUtc('2026-12-10','10:00').toISOString(),'2026-12-10T09:00:00.000Z');
+assert.equal(warsawToUtc('2027-07-10','10:00').toISOString(),'2027-07-10T08:00:00.000Z');
+assert.equal(warsawToUtc('2027-03-28','10:00').toISOString(),'2027-03-28T08:00:00.000Z');
+assert.equal(warsawToUtc('2027-10-31','10:00').toISOString(),'2027-10-31T09:00:00.000Z');
+for(const [day,time] of [['2026-02-30','10:00'],['2026-12-10','24:00'],['1999-01-01','10:00'],['2027-03-28','02:30'],['2027-10-31','02:30'],['','10:00']]) assert.throws(()=>warsawToUtc(day,time),RangeError);
+const options={date:'2026-12-10',time:'10:00',duration:'90',topic:'oferta'};
+assert.equal(eventDetails(options).end.toISOString(),'2026-12-10T10:30:00.000Z');
+assert.throws(()=>eventDetails({...options,duration:'120'}),RangeError);
+assert.throws(()=>eventDetails({...options,topic:'__proto__'}),RangeError);
+assert.throws(()=>eventDetails({...options,time:'11:00'}),RangeError);
+const ics=calendarFile(options,new Date('2026-11-23T12:00:00Z'));
+assert.match(ics,/DTSTART:20261210T090000Z\r\n/);
+assert.match(ics,/DTEND:20261210T103000Z\r\n/);
+assert.match(ics,/SUMMARY:DEMO: Rozmowa o kierunkach\r\n/);
+assert.match(ics,/STATUS:TENTATIVE/);
+assert.match(ics.replace(/\r\n /g,''),/nie jest wydarzenie ogłoszone przez szkołę ani rezerwacja miejsca/);
+assert.ok(ics.endsWith('END:VCALENDAR\r\n'));
+for(const line of ics.split('\r\n')) assert.ok(new TextEncoder().encode(line).length<=75,'ICS line exceeds 75 octets');
+const long='Zażółć gęślą jaźń. '.repeat(40),folded=foldLine(long);
+assert.equal(folded.replace(/\r\n /g,''),long);
+for(const line of folded.split('\r\n'))assert.ok(new TextEncoder().encode(line).length<=75);
+assert.equal(escapeText('a,b;c\nd\\e'),'a\\,b\\;c\\nd\\\\e');
+assert.equal(defaultDate(new Date('2026-12-28T23:30:00Z')),'2027-01-05');
+console.log('PASS: winter/summer and DST boundaries; invalid/ambiguous dates; duration and topic validation; UTF-8 ICS folding and escaping; DEMO status; default date across year boundary.');

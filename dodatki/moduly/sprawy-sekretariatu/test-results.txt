@@ -1,0 +1,12 @@
+✔ nieznany temat oraz klucze prototypu nie otwierają ścieżki (3.384101ms)
+✔ instrukcja świadectwa kieruje do właściwego dokumentu, nie do legitymacji (0.503904ms)
+✔ eksport zmienia się wraz z tematem i zachowuje polski tekst (0.632852ms)
+✔ odsyłacze tematów prowadzą tylko do oficjalnego serwera szkoły (0.301223ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 151.781588

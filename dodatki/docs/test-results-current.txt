@@ -1,0 +1,34 @@
+Kontrola integracji dodatków ZSP6, 23.11.2026
+
+PASS: 9 HTML pages, 8 independent modules, 96 local URLs, 24 JavaScript syntax checks.
+PASS: four courses and both next steps; invalid/inherited keys rejected; links remain official; results do not mutate catalogue.
+✔ /workspace/scratch/3b3eb135764b/zsp6-dodatki/moduly/asystent-kierunku/tests.mjs (137.779322ms)
+PASS: 12 kontroli wyszukiwania, polskich znaków, odbiorców i danych źródłowych.
+✔ /workspace/scratch/3b3eb135764b/zsp6-dodatki/moduly/biblioteka-dokumentow/tests.mjs (140.825777ms)
+PASS: corrupt storage, unknown/duplicate tasks, independent progress, JSON restore, reset isolation and truthful export.
+✔ /workspace/scratch/3b3eb135764b/zsp6-dodatki/moduly/checklista-rekrutacji/tests.mjs (149.191835ms)
+PASS: winter/summer and DST boundaries; invalid/ambiguous dates; duration and topic validation; UTF-8 ICS folding and escaping; DEMO status; default date across year boundary.
+✔ /workspace/scratch/3b3eb135764b/zsp6-dodatki/moduly/dni-otwarte/tests.mjs (164.542434ms)
+✔ pusty szkic oraz same białe znaki nie są gotowe do eksportu (2.404559ms)
+✔ eksport zawiera polski tekst, akapity i oznaczenie nieopublikowanego szkicu (0.731004ms)
+✔ limit Unicode nie przecina emoji i jest stosowany przed eksportem (1.248768ms)
+✔ kod HTML pozostaje zwykłym tekstem szkicu (0.470031ms)
+✔ nieprawidłowe typy nie są zamieniane w nieprzewidzianą treść (2.168199ms)
+PASS: 12 kontroli ról, przypięć, kolejności i uszkodzonych ustawień.
+✔ /workspace/scratch/3b3eb135764b/zsp6-dodatki/moduly/panel-ucznia-rodzica/tests.mjs (124.881303ms)
+PASS: 12 kontroli filtrowania, nawigacji cyklicznej i metadanych galerii.
+✔ /workspace/scratch/3b3eb135764b/zsp6-dodatki/moduly/portfolio-uczniow/tests.mjs (177.96327ms)
+✔ nieznany temat oraz klucze prototypu nie otwierają ścieżki (2.491494ms)
+✔ instrukcja świadectwa kieruje do właściwego dokumentu, nie do legitymacji (0.626781ms)
+✔ eksport zmienia się wraz z tematem i zachowuje polski tekst (0.623426ms)
+✔ odsyłacze tematów prowadzą tylko do oficjalnego serwera szkoły (0.397989ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 216.092068
+
+Static Pages build ready: 99 files in /workspace/scratch/3b3eb135764b/zsp6-dodatki/dist

@@ -1,0 +1,13 @@
+✔ pusty szkic oraz same białe znaki nie są gotowe do eksportu (1.463953ms)
+✔ eksport zawiera polski tekst, akapity i oznaczenie nieopublikowanego szkicu (0.456429ms)
+✔ limit Unicode nie przecina emoji i jest stosowany przed eksportem (0.290556ms)
+✔ kod HTML pozostaje zwykłym tekstem szkicu (0.258443ms)
+✔ nieprawidłowe typy nie są zamieniane w nieprzewidzianą treść (0.9321ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.961482

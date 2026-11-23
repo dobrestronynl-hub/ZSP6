@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { cleanState, progressFor, checklistText, STORAGE_KEY } from './logic.mjs';
+
+for (const corrupt of [null, undefined, false, 'text', [], 5]) assert.deepEqual(cleanState(corrupt), { active:'liceum', steps:{liceum:[],technikum:[]} });
+const state = cleanState({ active:'technikum', steps:{ liceum:['oferta','oferta','unknown','egzamin'], technikum:['zasady',null,3,'egzamin'] } });
+assert.deepEqual(state.steps.liceum, ['oferta','egzamin']);
+assert.deepEqual(state.steps.technikum, ['zasady']);
+assert.deepEqual(progressFor(state,'liceum'), {checked:2,total:5,percent:40});
+assert.deepEqual(progressFor(state,'technikum'), {checked:1,total:4,percent:25});
+assert.equal(cleanState({active:'__proto__'}).active,'liceum');
+assert.throws(()=>progressFor(state,'__proto__'),RangeError);
+const restored=cleanState(JSON.parse(JSON.stringify(state)));
+restored.steps.liceum=[];
+assert.equal(progressFor(restored,'technikum').checked,1);
+assert.equal(progressFor(state,'liceum').checked,2);
+const text=checklistText(state,'liceum');
+assert.match(text,/\[x\] Poznałem ofertę liceum/);
+assert.match(text,/\[ \] Przeczytałem aktualne zasady/);
+assert.match(text,/Nie jest zgłoszeniem/);
+assert.match(text,/https:\/\/zsp6tom.pl/);
+assert.match(STORAGE_KEY,/standalone:recruitment-checklist/);
+console.log('PASS: corrupt storage, unknown/duplicate tasks, independent progress, JSON restore, reset isolation and truthful export.');

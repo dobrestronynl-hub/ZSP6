@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {works,filterWorks,moveIndex} from './logic.mjs';
+assert.equal(works.length,8);
+assert.equal(filterWorks('foto').length,2);
+assert.equal(filterWorks('plastyka').length,3);
+assert.equal(filterWorks('grafika').length,2);
+assert.equal(filterWorks('fryzjerstwo').length,1);
+assert.deepEqual(filterWorks('nieznana'),[]);
+assert.equal(moveIndex(0,-1,2),1);
+assert.equal(moveIndex(1,1,2),0);
+assert.equal(moveIndex(0,1,1),0);
+assert.equal(moveIndex(0,1,0),-1);
+assert.equal(new Set(works.map(x=>x.src)).size,8);
+assert.ok(works.every(x=>x.width>0&&x.height>0&&x.alt.length>10&&new URL(x.src).hostname==='zsp6tom.pl'));
+console.log('PASS: 12 kontroli filtrowania, nawigacji cyklicznej i metadanych galerii.');

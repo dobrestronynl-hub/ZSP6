@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {sanitizePreferences,visibleLinks,togglePin,links} from './logic.mjs';
+assert.deepEqual(sanitizePreferences(null),{role:'uczen',pins:[]});
+assert.deepEqual(sanitizePreferences({role:'administrator',pins:['kontakt','kontakt','bad','__proto__',null]}),{role:'uczen',pins:['kontakt']});
+assert.deepEqual(sanitizePreferences({role:'rodzic',pins:'kontakt'}),{role:'rodzic',pins:[]});
+assert.ok(visibleLinks('rodzic').some(x=>x.id==='rekrutacja'));
+assert.ok(!visibleLinks('uczen').some(x=>x.id==='rekrutacja'));
+assert.ok(!visibleLinks('rodzic').some(x=>x.id==='galeria'));
+assert.equal(visibleLinks('uczen',['ochrona'])[0].id,'ochrona');
+assert.deepEqual(togglePin(['kontakt'],'kontakt'),[]);
+assert.deepEqual(togglePin([],'kontakt'),['kontakt']);
+assert.deepEqual(togglePin(['kontakt'],'bad'),['kontakt']);
+assert.ok(visibleLinks('uczen',['rekrutacja']).every(x=>x.id!=='rekrutacja'));
+assert.equal(new Set(links.map(x=>x.id)).size,links.length);
+console.log('PASS: 12 kontroli ról, przypięć, kolejności i uszkodzonych ustawień.');

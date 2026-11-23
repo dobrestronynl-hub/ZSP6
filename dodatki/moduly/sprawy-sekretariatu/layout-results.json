@@ -1,0 +1,74 @@
+[
+  {
+    "page": "/__modules/ZSP6-sprawy-sekretariatu/index.html",
+    "width": 360,
+    "scrollWidth": 345,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1
+  },
+  {
+    "page": "/__modules/ZSP6-sprawy-sekretariatu/index.html",
+    "width": 390,
+    "scrollWidth": 375,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1
+  },
+  {
+    "page": "/__modules/ZSP6-sprawy-sekretariatu/index.html",
+    "width": 768,
+    "scrollWidth": 753,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1
+  },
+  {
+    "page": "/__modules/ZSP6-sprawy-sekretariatu/index.html",
+    "width": 1024,
+    "scrollWidth": 1009,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1
+  },
+  {
+    "page": "/__modules/ZSP6-sprawy-sekretariatu/index.html",
+    "width": 1440,
+    "scrollWidth": 1425,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1
+  },
+  {
+    "page": "/__modules/ZSP6-sprawy-sekretariatu/index.html",
+    "width": 1920,
+    "scrollWidth": 1905,
+    "overflow": false,
+    "menu": false,
+    "navLinks": 0,
+    "sidebar": false,
+    "trigger": false,
+    "failedImages": [],
+    "h1": 1
+  }
+]
